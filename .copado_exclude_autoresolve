@@ -4,6 +4,8 @@
 # Copado Docs & Samples: https://docs.copado.com/articles/copado-ci-cd-publication/conflict-resolution-in-copado-devops-platform
 # Sample statements for metadata which is frequently excluded.
 # please remove comment (#) to "activate" a statement and start resolving conflicts for specific metadata manually in Copado:
+
+
 # Apex Classes and Triggers
 **/classes/*.cls
 **/triggers/*.trigger
@@ -16,16 +18,5 @@
 **/aura/*/*
 **/lwc/*/*
 
-# Custom Metadata and Custom Settings
-**/customMetadata/*.md-meta.xml
-**/customSettings/*.setting-meta.xml
-
-# Profiles and Permission Sets
-**/profiles/*.profile-meta.xml
-**/permissionsets/*.permissionset-meta.xml
-
-# Workflow Rules
-**/workflows/*.workflow-meta.xml
-
-# Process Builder Processes
+# Process Builder / Flows
 **/flows/*.flow-meta.xml
