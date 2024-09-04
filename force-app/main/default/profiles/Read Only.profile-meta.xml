@@ -2215,6 +2215,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Smoke1__c.ArpanDate__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Smoke1__c.Type__c</field>
         <readable>false</readable>
     </fieldPermissions>
