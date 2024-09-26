@@ -5,7 +5,7 @@ private class BSMSmokeCLI1Test {
     private static void testBSMSmokeCLI1() {
         User usr = createTestUser();
         List<Note> notes = new List<Note>();
-        // Create Note records
+        // Create Note records because we can
         for (Integer i = 0; i < 2; i++) {
             Note note = new Note();
             note.Title = 'Test Note ' + i;
