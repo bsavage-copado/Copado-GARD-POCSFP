@@ -1,28 +1,16 @@
 @isTest
-private class BSMSmokeCLI1Test {
-
-@isTest
-    private static void testBSMSmokeCLI1() {
-        User usr = createTestUser();
-        List<Note> notes = new List<Note>();
-        // Create Note records because we can
-        // Like we really can
-        for (Integer i = 0; i < 2; i++) {
-            Note note = new Note();
-            note.Title = 'Test Note ' + i;
-            note.body = 'Test Body';
-            notes.add(note);
+    static void testProcessNumber() {
+        User adminUser = createAdminUser();
+        System.runAs(adminUser){
+            // Test positive input
+            Result positiveResult = BSMSmokeCLI1.processNumber(42);
+            System.assertEquals(3, positiveResult.digitCount);
+            System.assertEquals(39, positiveResult.subtractedValue);
+    
+            // Test negative input (ensure it returns a positive result)
+            Result negativeResult = BSMSmokeCLI1.processNumber(-42);
+            System.assertEquals(3, negativeResult.digitCount);
+            System.assertEquals(45, negativeResult.subtractedValue);
         }
-        Database.insert(notes, false, AccessLevel.USER_MODE);
-
-        System.runAs(usr) {
-            Test.startTest();
-            BSMSmokeCLI1 bsm = new BSMSmokeCLI1();
-            bsm.sendNotesData(notes);
-            Test.stopTest();
-        }
-
-        // Asserts
-        // ...
     }
-}
+
